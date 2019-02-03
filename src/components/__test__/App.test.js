@@ -7,6 +7,7 @@ it('Shows a comment box', () => {
    ReactDOM.render(<App/>,div);
 
    expect(div.innerHTML).toContain('comment box');
+   //  expect(div).toHaveAnInstanceOf(CommentBox);
 
    ReactDOM.unmountComponentAtNode(div);
 });
