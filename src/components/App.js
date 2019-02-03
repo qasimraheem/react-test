@@ -5,6 +5,7 @@ import CommentList from './CommentList';
 export default () => {
     return (
         <div>
+            helo
             <CommentBox/>
             <CommentList/>
         </div>
