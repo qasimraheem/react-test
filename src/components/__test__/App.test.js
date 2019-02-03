@@ -1,10 +1,13 @@
 import React from 'react';
 // import { shallow } from 'enzyme';
-import App from '../App';
-import CommentBox from '../CommentBox';
-import CommentList from '../CommentList';
+import App from 'components/App';
+import CommentBox from 'components/CommentBox';
+import CommentList from 'components/CommentList';
 import { shallow, mount, render } from 'enzyme';
-
+let wrapped;
+beforeEach('before runs',()=>{
+   wrapped = shallow(<App/>);
+});
 it('Shows a comment box', () => {
    // const div = document.createElement('div');
    // ReactDOM.render(<App/>,div);
@@ -13,13 +16,11 @@ it('Shows a comment box', () => {
    // //  expect(div).toHaveAnInstanceOf(CommentBox);
 
 
-   const wrapped = shallow(<App/>);
    expect(wrapped.find(CommentBox).length).toEqual(1);
    // ReactDOM.unmountComponentAtNode(div);
 });
 
 //second expect shallow
 it('shows a comment list',()=>{
-   const wrapper=shallow(<App/>);
-   expect(wrapper.find(CommentList).length).toEqual(1);
-})
+   expect(wrapped.find(CommentList).length).toEqual(1);
+});
