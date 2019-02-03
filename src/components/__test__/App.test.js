@@ -5,7 +5,7 @@ import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 import { shallow, mount, render } from 'enzyme';
 let wrapped;
-beforeEach('before runs',()=>{
+beforeEach(()=>{
    wrapped = shallow(<App/>);
 });
 it('Shows a comment box', () => {
