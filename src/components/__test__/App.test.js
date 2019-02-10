@@ -16,11 +16,11 @@ it('Shows a comment box', () => {
    // //  expect(div).toHaveAnInstanceOf(CommentBox);
 
 
-   expect(wrapped.find(CommentBox).length).toEqual(1);
+   expect(wrapped.find(CommentBox).length).toEqual(0);
    // ReactDOM.unmountComponentAtNode(div);
 });
 
 //second expect shallow
 it('shows a comment list',()=>{
-   expect(wrapped.find(CommentList).length).toEqual(1);
+   expect(wrapped.find(CommentList).length).toEqual(0);
 });
